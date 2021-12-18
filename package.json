@@ -1,0 +1,25 @@
+{
+  "name": "xender",
+  "version": "1.0.0",
+  "description": "this is simple file sharing app created by satyapsr13@gmail.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyapsr13/file-sharing-app-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satyapsr13/file-sharing-app-nodejs/issues"
+  },
+  "homepage": "https://github.com/satyapsr13/file-sharing-app-nodejs#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15"
+  }
+}
