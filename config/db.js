@@ -1,8 +1,13 @@
-const mongoose=require("mongoose")
+require("dotenv").config();
+const mongoose = require("mongoose");
+
 function connectDB() {
-    mongoose.connect(url, {
-        useNewUrlParser:true,
-    })
-    const connect = mongoose.connection;
+    mongoose.connect(process.env.MONGO_URL);
+    const connection = mongoose.connection;
+    connection.once('open', () => {
+        console.log('database connected');
+    }) ; 
     
+
 }
+module.exports = connectDB;
