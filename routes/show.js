@@ -14,6 +14,13 @@ router.get("/:uuid", async (req, res) => {
             });
 
         }
+        return res.status(200).json({
+            uuid: file.uuid,
+            fileName: file.filename,
+            fileSize: file.size,
+            downloadLink: `${process.env.APP_BASE_LINK}/files/download/${file.uuid}`
+        });
+
     } catch (error) {
         res.status(500).json({
             iam: error
